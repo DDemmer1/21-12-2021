@@ -13,7 +13,7 @@ In dieser Aufgabe wird das Mail Programm von letzter Sitzung erweitert. Eine fun
   - Die Klasse soll ein ```Mail[] mail``` haben in das Mails gespeichert werden können.
   - Außerdem braucht die Klasse einen Konstruktor mit dem das ```Mail[]``` Array initialisiert wird. Programmiert den Konstruktor so, dass man bei der initialisierung eines ```MailCollection```-Objektes die Länge des ```Mail[] mail``` frei wählen kann (```public MailCollection(int size)```)
   - Die ```MailCollection``` soll eine Methode haben mit der man ```Mail``` Objekte in das Array einfügen kann. Die Methode soll immer an der letzten freien Stelle eine Mail einfügen. Wenn das Array voll ist soll die Methode ```false``` zurückgeben. Wenn die ```Mail``` erfolgreich eingefügt wurde soll ```true``` zurückgegeben werden.
-  - (public boolean addMail(Mail mail))
+  - (```public boolean addMail(Mail mail)```)
  
 
 
