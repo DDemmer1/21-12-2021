@@ -11,7 +11,7 @@ public class Mail{
 
 	private String sender;
 	private String recipient;
-	private String date;
+	private Date date;
 	private String text;
 	
 	
@@ -23,7 +23,7 @@ public class Mail{
 		this();
 		this.sender = sender;
 		this.recipient = recipient;
-		this.date = new Date().toString();
+		this.date = new Date();
 		this.text = "";
 	}
 
@@ -47,18 +47,22 @@ public class Mail{
 		return sender;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	
-	
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	public String toString() {
 		return "Mail [sender=" + sender + ", recipient=" + recipient + ", date=" + date + ", text=" + text + "]";
 	}
 	
 	public void send() {
+	
 		Email email = EmailBuilder.startingBlank().appendText(getText()).to(getRecipient())
-				.from(getSender()).fixingSentDate(new Date(2021, 12, 11)).buildEmail();
+				.from(getSender()).fixingSentDate(date).buildEmail();
 		Mailer mailer = MailerBuilder.withSMTPServer("smtp.uni-koeln.de", 25).buildMailer();
 		mailer.sendMail(email);
 	}
