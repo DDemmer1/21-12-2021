@@ -4,7 +4,7 @@
 
 ### 📝 Aufgabe:
 
-In dieser Aufgabe wird das Mail Programm von letzter Sitzung vervollständigt
+In dieser Aufgabe wird das Mail Programm von letzter Sitzung erweitert. Eine funktionsfähige Version mit allen notwendigen Bibliotheken befindet sich in diesem Repo.
 
 - Erstellt eine Klasse ```Inbox```
 - Erstellt eine Klasse ```Sent```
