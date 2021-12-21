@@ -59,12 +59,6 @@ public class Mail{
 		return "Mail [sender=" + sender + ", recipient=" + recipient + ", date=" + date + ", text=" + text + "]";
 	}
 	
-	public void send() {
-	
-		Email email = EmailBuilder.startingBlank().appendText(getText()).to(getRecipient())
-				.from(getSender()).fixingSentDate(date).buildEmail();
-		Mailer mailer = MailerBuilder.withSMTPServer("smtp.uni-koeln.de", 25).buildMailer();
-		mailer.sendMail(email);
-	}
+
 
 }
